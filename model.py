@@ -8,7 +8,6 @@ Original file is located at
 """
 
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
@@ -16,9 +15,6 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import BinaryCrossentropy
 
 df = pd.read_csv("heart.csv")
-
-print(sum(df['output']==1))
-print(sum(df['output']==0))
 
 x = df.iloc[:, 1:-1].values
 y = df.iloc[:, -1].values
