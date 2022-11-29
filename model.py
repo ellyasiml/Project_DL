@@ -13,6 +13,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import BinaryCrossentropy
+from keras.callbacks import EarlyStopping
 
 df = pd.read_csv("heart.csv")
 
@@ -35,7 +36,6 @@ model.add(Dense(1,activation = 'sigmoid'))
 
 model.compile(loss="binary_crossentropy", optimizer=Adam(lr=0.0001), metrics=['accuracy'])
 
-from keras.callbacks import EarlyStopping
 cb = EarlyStopping(
     monitor='accuracy',
     min_delta=0.001,
