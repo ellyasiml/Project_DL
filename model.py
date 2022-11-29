@@ -23,8 +23,6 @@ y = df.iloc[:, -1].values
 sc = StandardScaler()
 x = sc.fit_transform(x)
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size= 0.1, random_state= 0)
-
 model = Sequential()
 model.add(Dense(512,activation='relu',input_shape=(12,)))
 model.add(Dropout(0.5))
