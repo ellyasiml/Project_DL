@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="index.html"><img src="{{asset('assets/image/logo.png')}}" alt="logo" width="30" height="24" class="me-2">iHeart</a>
+          <a class="navbar-brand text-white" href="{{url("/heart-attack/input")}}"><img src="{{asset('assets/image/logo.png')}}" alt="logo" width="30" height="24" class="me-2">iHeart</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,13 +34,13 @@
             <div class="col-2"></div>
             <div class="col">
                 <div class="shadow p-3 m-5 bg-body rounded">
-                    <form>
+                    <form id="heartForm" method="POST" onsubmit="onFormSubmit();">
                         <legend>Heart Patient Data</legend>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">person</span></div>
-                                <input type="number" class="form-control" id="name">
+                                <input type="text" class="form-control" id="name">
                             </div>
                         </div>
                         <div class="mb-3">
@@ -127,13 +127,36 @@
                                 <label class="form-check-label" for="exang">Exercise Induced Angina</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#safeModal">Submit</button>
                     </form>
+                    <script>
+                        function onFormSubmit() {
+                        event.preventDefault();
+                    }
+                    </script>
                 </div>
             </div>
             <div class="col-2"></div>
         </div>
     </div>
+    <div class="modal fade" id="safeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Prediction Result</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="{{asset('assets/image/safe.png')}}" width="130px">
+                <p><br>Less chance of heart attack or disease</p>
+            </div>
+            <div class="modal-footer text-center">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Understood</button>
+            </div>
+          </div>
+        </div>
+    </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,186.7C672,192,768,224,864,208C960,192,1056,128,1152,106.7C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
