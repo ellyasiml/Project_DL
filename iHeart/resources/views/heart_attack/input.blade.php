@@ -40,27 +40,27 @@
                             <label for="name" class="form-label">Name</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">person</span></div>
-                                <input type="text" class="form-control" id="name">
+                                <input type="text" class="form-control" name="name" id="name">
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="age" class="form-label">Age</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">cake</span></div>
-                                <input type="number" class="form-control" id="age">
+                                <input type="number" class="form-control" name="age" id="age">
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="sex" class="form-label">Sex</label>
                             <div class="d-flex">
                                 <div class="form-check me-3">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="male" value="1" checked>
+                                    <input class="form-check-input" type="radio" name="sex" id="male" value="1" checked>
                                     <label class="form-check-label" for="male">
                                         Male
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="female" value="0">
+                                    <input class="form-check-input" type="radio" name="sex" id="female" value="0">
                                     <label class="form-check-label" for="female">
                                         Female
                                     </label>
@@ -71,11 +71,11 @@
                             <label for="cp" class="form-label">Chest Pain Type</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">vital_signs</span></div>
-                                <select class="form-select" id="cp">
-                                    <option value="1">Typical Angina</option>
-                                    <option value="2">Atypical Angina</option>
-                                    <option value="3">Non-anginal Pain</option>
-                                    <option value="4">Asymptomatic</option>
+                                <select class="form-select" name="cp" id="cp">
+                                    <option value="0">Typical Angina</option>
+                                    <option value="1">Atypical Angina</option>
+                                    <option value="2">Non-anginal Pain</option>
+                                    <option value="3">Asymptomatic</option>
                                 </select>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                             <label for="trtbps" class="form-label">Resting Blood Pressure</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">hematology</span></div>
-                                <input type="number" class="form-control" id="trtbps">
+                                <input type="number" class="form-control" name="trtbps" id="trtbps">
                                 <div class="input-group-text">mm Hg</div>
                             </div>
                         </div>
@@ -91,23 +91,32 @@
                             <label for="chol" class="form-label">Cholesterol</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">body_fat</span></div>
-                                <input type="number" class="form-control" id="chol">
+                                <input type="number" class="form-control" name="chol" id="chol">
                                 <div class="input-group-text">mg/dl</div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="fbs" class="form-label">Fasting Blood Sugar</label>
-                            <div class="input-group">
-                                <div class="input-group-text"><span class="material-symbols-outlined">glucose</span></div>
-                                <input type="number" class="form-control" id="fbs">
-                                <div class="input-group-text">mg/dl</div>
+                            <label for="fbs" class="form-label">Fasting Blood Sugar > 120mg/dl</label>
+                            <div class="d-flex">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="fbs" id="no" value="0" checked>
+                                    <label class="form-check-label" for="no">
+                                        No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fbs" id="yes" value="1">
+                                    <label class="form-check-label" for="yes">
+                                        Yes
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="rest_ecg" class="form-label">Resting Electrocardiographic Results</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">monitor_heart</span></div>
-                                <select class="form-select" id="rest_ecg">
+                                <select class="form-select" name="rest_ecg" id="rest_ecg">
                                     <option value="0">Normal</option>
                                     <option value="1">Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
                                     <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
@@ -118,13 +127,61 @@
                             <label for="thalach" class="form-label">Maximum Heart Rate Achieved</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">monitor_heart</span></div>
-                                <input type="number" class="form-control" id="thalach">
+                                <input type="number" class="form-control" name="thalach" id="thalach">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="exang">
-                                <label class="form-check-label" for="exang">Exercise Induced Angina</label>
+                            <label for="exang" class="form-label">Exercise Induced Angina</label>
+                            <div class="d-flex">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="exang" id="no" value="0" checked>
+                                    <label class="form-check-label" for="no">
+                                        No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exang" id="yes" value="1">
+                                    <label class="form-check-label" for="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="oldpeak" class="form-label">ST Depression Induced by Exercise Relative to Rest</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><span class="material-symbols-outlined">diagnosis</span></div>
+                                <input type="number" class="form-control" name="oldpeak" id="oldpeak">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="slp" class="form-label">Slope of the Peak Exercise ST Segment</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><span class="material-symbols-outlined">diagnosis</span></div>
+                                <select class="form-select" name="slp" id="slp">
+                                    <option value="0">Unsloping</option>
+                                    <option value="1">Flat</option>
+                                    <option value="2">Downsloping</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="caa" class="form-label">Number of Major Vessels</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><span class="material-symbols-outlined">hematology</span></div>
+                                <input type="number" class="form-control" name="caa" id="caa">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="thall" class="form-label">Thalassemia</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><span class="material-symbols-outlined">bloodtype</span></div>
+                                <select class="form-select" name="thall" id="thall">
+                                    <option value="0">Unknown</option>
+                                    <option value="1">None</option>
+                                    <option value="2">Normal</option>
+                                    <option value="3">Reversable Defect</option>
+                                </select>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#safeModal">Submit</button>
