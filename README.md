@@ -64,3 +64,18 @@ Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasa
 # MODEL DEEP LEARNING
 1. MODEL HEART
 - MODEL 1
+Model 1 terdiri dari total 4 lapisan.
+1.	Input layer dengan node 256
+2.	2 hidden layer dengan jumlah node berturut-turut 128 dan 64.
+3.	Output layer menggunakan aktivasi sigmoid.
+Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learning rate 0.0001. Arsitektur lengkapnya dapat dilihat pada gambar dibawah.
+![image](https://user-images.githubusercontent.com/90238361/208729395-ebbdbbbd-0887-4c23-99ab-7d4e59dec1ac.png)
+
+Hasil training model 1 dapat dilihat pada gambar di bawah.
+![image](https://user-images.githubusercontent.com/90238361/208729452-a1da90a5-bcdc-4215-809c-ef9082ee55d9.png)
+![image](https://user-images.githubusercontent.com/90238361/208729479-84a9fda8-84e1-49a2-9b0a-7483201b8183.png)
+Model mendapatkan accuracy tertinggi 0.82 dan loss 0.38 dengan val_accuracy 0.84 serta val_loss 0.32.
+
+Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
+![image](https://user-images.githubusercontent.com/90238361/208729594-8683c94a-3cc5-454a-8452-ac66d50a5642.png)
+Model 1 mendapat akurasi sebesar 87%, dan karena dataset yang digunakan merupakan dataset kesehatan maka recall label positif (1) mendapat prioritas tinggi dalam evaluasi model. Recall label 1 mendapat nilai 0.81.
