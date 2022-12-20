@@ -1,6 +1,5 @@
 # iHeart
 This project is made for 2022 Deep Learning class final project at Udayana University
-
 Team Member
 - I Gusti Ayu Mirah Agniati   1905551009
 - Lidya Yanti	                1905551012
@@ -35,6 +34,6 @@ Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasa
 
 4. setelah mengisi form data lalu klik submit
 ![image](https://user-images.githubusercontent.com/90238361/208705463-1bedf317-f9a1-4f54-b7f6-fe0a1702104f.png)
-
+5. setelah melakukan submit, hasil output akan menunjukkan apakah pasien berpeluang memiliki penyakit jantung atau tidak
 
 
