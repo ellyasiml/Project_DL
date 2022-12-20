@@ -12,3 +12,14 @@ https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 
 # ALGORITMA
 Algoritma yang digunakan dalam Aplikasi iHeart yaitu 
+
+
+# ARSITEKTUR APLIKASI
+
+
+# METODE PENELITIAN
+1. DATA PREPROCESING
+2. MEMBUAT MODEL
+-
+3. CARA MENJALANKAN APLIKASI
+
