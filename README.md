@@ -74,10 +74,12 @@ Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learn
 Hasil training model 1 dapat dilihat pada gambar di bawah.
 ![image](https://user-images.githubusercontent.com/90238361/208727006-468ff89a-cc4a-4cbd-bc84-28973bf45914.png)
 ![image](https://user-images.githubusercontent.com/90238361/208727028-411141a5-53af-48e9-a35b-4b1f4a31a0db.png)
+
 Model mendapatkan accuracy tertinggi 0.82 dan loss 0.38 dengan val_accuracy 0.84 serta val_loss 0.32.
 
 Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
 ![image](https://user-images.githubusercontent.com/90238361/208727110-2077aaaf-94f2-4b68-927d-140c4c54c226.png)
+
 Model 1 mendapat akurasi sebesar 87%, dan karena dataset yang digunakan merupakan dataset kesehatan maka recall label positif (1) mendapat prioritas tinggi dalam evaluasi model. Recall label 1 mendapat nilai 0.81.
 
 - Model 2
@@ -97,6 +99,7 @@ Model 2 mendapatkan accuracy tertinggi 0.89 dan loss 0.26 dengan val_accuracy 0.
 
 Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
 ![image](https://user-images.githubusercontent.com/90238361/208727346-658af1f4-fa43-4846-a620-abcd5fc89a49.png)
+
 Model 2 mendapat skor yang lebih baik dari model 1 dengan akurasi sebesar 87% dan recall label positif 0.84.
 
 
@@ -105,16 +108,19 @@ Model 3 terdiri dari total 5 lapisan.
 1. Input layer dengan node 128
 2. 3 hidden layer dengan jumlah node berturut-turut 64, 32 dan 32.
 3. Output layer menggunakan aktivasi sigmoid.
+
 Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learning rate 0.00001. Arsitektur lengkapnya dapat dilihat pada gambar dibawah.
 ![image](https://user-images.githubusercontent.com/90238361/208727481-f8649ad4-e50c-4c75-8871-a2748195a1ee.png)
 
 Hasil training model 3 dapat dilihat pada gambar di bawah.
 ![image](https://user-images.githubusercontent.com/90238361/208727507-499d6703-84b9-46c6-ac11-24b3cb5aced9.png)
 ![image](https://user-images.githubusercontent.com/90238361/208727537-d81eb8b3-87bd-4ee8-b8ab-eb94cdf3f870.png)
+
 Model 3 mendapatkan accuracy tertinggi 0.96 dan loss 0.08 dengan val_accuracy 0.88 serta val_loss akhir 0.46.
 
 Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
 ![image](https://user-images.githubusercontent.com/90238361/208727577-66176eef-aa01-4069-b4ce-c73990ed4e79.png)
+
 Model 3 mendapat akurasi yang lebih rendah dari model 2, yaitu 0.85. Namun mendapat recall label 1 yang lebih baik yaitu 0.88
 
 Hasil evaluasi: Dengan mempertimbangkan recall label positif sebagai prioritas utama dalam mengevaluasi model, diputuskan untuk menggunakan model 3.
@@ -132,11 +138,13 @@ Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learn
 Hasil training model 1 dapat dilihat pada gambar di bawah.
 ![image](https://user-images.githubusercontent.com/90238361/208728182-480d7901-796d-46c4-a8d4-f2c67b412713.png)
 ![image](https://user-images.githubusercontent.com/90238361/208728210-ad5bf674-3e89-41ba-86aa-7b0eae00837a.png)
+
 Model 1 mendapatkan accuracy tertinggi 0.84 dan loss 0.36 dengan val_accuracy 0.97 serta val_loss 0.29.
 
 Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
 ![image](https://user-images.githubusercontent.com/90238361/208728299-be71f136-8b9b-4f07-9760-704fb72e6688.png)
 ![image](https://user-images.githubusercontent.com/90238361/208728320-31729d5f-b0b2-4376-bfeb-d4aaf371f4a5.png)
+
 Model 1 mendapat akurasi sebesar 77%, dan karena dataset yang digunakan merupakan dataset kesehatan maka recall label positif (1) mendapat prioritas tinggi dalam evaluasi model. Recall label 1 mendapat nilai 0.72.
 
 - Model 2
@@ -150,11 +158,13 @@ Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learn
 Hasil training model 2 dapat dilihat pada gambar di bawah.
 ![image](https://user-images.githubusercontent.com/90238361/208728485-4cfb2f8a-5bfb-464c-8172-6a7e1eadd6e4.png)
 ![image](https://user-images.githubusercontent.com/90238361/208728512-e943c0e1-2bc9-49d4-a34e-aff7dc7af07d.png)
+
 Model 2 mendapatkan accuracy tertinggi 0.69 dan loss 0.56 dengan val_accuracy 0.77 serta val_loss 0.58.
 
 Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
 ![image](https://user-images.githubusercontent.com/90238361/208728568-cf6cfe62-d26f-446c-9045-6761bce7e1e4.png)
 ![image](https://user-images.githubusercontent.com/90238361/208728588-f03b7e2c-bb02-45cb-8232-e3df23c9a0f1.png)
+
 Model 2 mendapat akurasi sebesar 81% yang lebih baik daripada model 1, namun recall label positif (1) mendapat skor yang lebih rendah dari model 1 yaitu 0.68.
 
 Hasil evaluasi: Dengan mempertimbangkan recall label positif sebagai prioritas utama dalam mengevaluasi model, diputuskan untuk menggunakan model 1.
