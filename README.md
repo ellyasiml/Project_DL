@@ -59,8 +59,15 @@ Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbed
 # ALGORITMA
 Algoritma yang digunakan dalam Aplikasi iHeart yaitu Artificial Neural Network(ANN)
 Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasan yang diilhami dari struktur otak manusia dan kemudian diimplementasikan menggunakan program komputer yang mampu menyelesaikan sejumlah proses perhitungan selama proses learning berlangsung. Artificial Neural Network cocok disambungan dengan dataset yang disiapkan, karna ANN ini memiliki kemampuan yang luar biasa untuk mendapatkan informasi dari data yang rumit atau tidak tepat sehingga permasalahan yang tidak terstruktur dan sulit didefinisikan dapat diatasi. Namun, Artificial Neural Network juga memiliki kelemahan dimana adanya ketergantungan terhadap hardware dan tidak efektif jika digunakan untuk melakukan operasi-operasi numerik dengan presisi tinggi dan membutuhkan pelatihan dalam waktu yang lama jika jumlah data yang diolah besar.
+# MODEL DEEP LEARNING
+- MODEL 1
 
 # PROSES TREANING DAN TESTING
+Dataset yang diperoleh melalui tahap preprocessing, seperti one-hot encoding menggunakan get_dummies, dan juga feature scaling menggunakan StandardScaler. Khusus pada dataset Stroke, terjadi ketidak seimbangan pada label sehingga dilakukan oversampling pada train set. Pada dataset stroke juga terdapat sekitar 201 baris yang memiliki value null pada kolom BMI, maka baris-baris tersebut dibuang. Setelah melalui tahap preprocessing, maka dilakukan proses training. Proses training dimulai dengan memisahkan train set dengan test set. Train set 80% dan test set 20%.
+
+Pada model heart, training dilakukan dengan epoch 2000 dan validation split 0.1. Diterapkan pula EarlyStopping menggunakan parameter accuracy dengan patience 100.  Proses fitting terhenti pada Epoch ke-962 dengan accuracy tertinggi sekitar 0.96 dan val_accuracy tertinggi sekitar 0.88. Setelah melalui proses fitting, model diuji menggunakan test set yang telah disiapkan dan memperoleh akurasi sebesar 85% dengan recall label positif (1) sebesar 0.88.
+
+Pada model stroke, training dilakukan dengan epoch 5000 dan validation split 0.1. Diterapkan pula EarlyStopping menggunakan parameter accuracy dengan patience 50.  Proses fitting terhenti pada Epoch ke-1346 dengan accuracy tertinggi sekitar 0.84, dan val_accuracy tertinggi sekitar 0.97. Setelah melalui proses fitting, model diuji menggunakan test set yang telah disiapkan dan memperoleh akurasi sebesar 77% dengan recall label positif (1) sebesar 0.72.
 
 # ANALISIS MODEL DAN HASIL EVALUASI
 
