@@ -24,4 +24,5 @@ Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasa
 # ANALISIS MODEL DAN HASIL EVALUASI
 
 # CARA MENJALANKAN APLIKASI
-
+1. Masuk ke halaman utama website iHeart 
+2. pilih akan melakukan analisa penyakit jantung ataupun stroke
