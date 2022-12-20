@@ -1,19 +1,45 @@
 # iHeart
 This project is made for 2022 Deep Learning class final project at Udayana University
 Team Member
-- I Gusti Ayu Mirah Agniati   1905551009
-- Lidya Yanti	                1905551012
-- Luckystia Mafasani Ulfa	    1905551048
-- Ellyas Immanuel Sinaga	    1905551055
-- Kevin Salim Yudistira	      1905551057
+- I Gusti Ayu Mirah Agniati   (1905551009)
+- Lidya Yanti	                (1905551012)
+- Luckystia Mafasani Ulfa	    (1905551048)
+- Ellyas Immanuel Sinaga	    (1905551055)
+- Kevin Salim Yudistira	      (1905551057)
 
 # DESKRIPSI WEBSITE
-iHeart adalah aplikasi web yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Disamping itu iHeart juga terdapat fitur tambahan pendetaksi penyakit stroke. 
+iHeart adalah aplikasi web yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Selain itu aplikasi iHeart juga mempunyai fitur tambahan pendetaksi penyakit stroke. 
 
 # ARSITEKTUR WEBSITE
 
 # DATASET
 Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbeda yang dimana menggunakan dataset penyakit jantung dan dataset penyakit stroke. masing-masaing data diambil melalui internet yang dimana Dataset penyakit jantung diambil dari Kaggle, berisi 13 atribut + 1 target label. *gender, sex, age, cholesterol, glucose, ECG result, BP, etc* dengan link  (https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv) dan dataset penyakit stroke diambil dari Kaggle, berisi11 atribut + 1 taeget label *gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke* dengan link (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+
+# Dataset Penyakit Jantung
+| No. | Nama Kolom | Keterangan |
+|-----| :--------: |------------|
+|  1. | `age`      | Usia pasien |
+|  2. | `sex`      | Jenis kelamin pasien |
+|  3. | `cp`       | Jenis nyeri dada (Angina)
+|     |            | - Value 1: typical angina |
+|     |            | - Value 2: atypical angina |
+|     |            | - Value 3: non-anginal pain |
+|     |            | - Value 4: asymptomatic |
+|  4. | `trtbps`   | Tekanan darah (mm Hg) |
+|  5. | `chol`     | Kolestrol (mg/dl) menggunakan sensor BMI |
+|  6. | `fbs`      | fasting blood sugar (gula darah > 120 mg/dl)|
+|     |            | (1 = true; 0 = false|
+|  7. | `restecg`  | Hasil resting electrocardiographic|
+|  8. | `thalachh` | Detak jantung maksimum tercapai |
+|  9. | `exng`     | Nyeri (1 = yes; 0 = no) |
+| 10. | `oldpeak`  | Previous peak |
+| 11. | `slp`      | Slope of the Peak Exercise ST Segment |
+| 12. | `caa`      | Jumlah Major Vessels (0-3) |
+| 13. | `thall`    | Talasemia |
+
+
+
+# Dataset Stroke
 
 # ALGORITMA
 Algoritma yang digunakan dalam Aplikasi iHeart yaitu Artificial Neural Network(ANN)
