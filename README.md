@@ -1,5 +1,11 @@
 # iHeart
 This project is made for 2022 Deep Learning class final project at Udayana University
+Team Member
+- I Gusti Ayu Mirah Agniati   1905551009
+- Lidya Yanti	                1905551012
+- Luckystia Mafasani Ulfa	    1905551048
+- Ellyas Immanuel Sinaga	    1905551055
+- Kevin Salim Yudistira	      1905551057
 
 # DESKRIPSI WEBSITE
 iHeart adalah aplikasi web yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Disamping itu iHeart juga terdapat fitur tambahan pendetaksi penyakit stroke. 
