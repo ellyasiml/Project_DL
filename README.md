@@ -26,3 +26,10 @@ Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasa
 # CARA MENJALANKAN APLIKASI
 1. Masuk ke halaman utama website iHeart 
 2. pilih akan melakukan analisa penyakit jantung ataupun stroke
+![image](https://user-images.githubusercontent.com/90238361/208703018-a630c5be-71d5-4806-bab6-47ead6a3c7bc.png)
+
+3. lakukan pengisian data pada form di halaman website iHeart
+
+4. setelah mengisi form data lalu klik submit
+
+
