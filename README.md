@@ -72,7 +72,9 @@ Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learn
 ![image](https://user-images.githubusercontent.com/90238361/208729395-ebbdbbbd-0887-4c23-99ab-7d4e59dec1ac.png)
 
 Hasil training model 1 dapat dilihat pada gambar di bawah.
+
 ![image](https://user-images.githubusercontent.com/90238361/208729452-a1da90a5-bcdc-4215-809c-ef9082ee55d9.png)
+
 ![image](https://user-images.githubusercontent.com/90238361/208729479-84a9fda8-84e1-49a2-9b0a-7483201b8183.png)
 Model mendapatkan accuracy tertinggi 0.82 dan loss 0.38 dengan val_accuracy 0.84 serta val_loss 0.32.
 
