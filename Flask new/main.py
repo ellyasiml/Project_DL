@@ -4,6 +4,7 @@ import tensorflow as tf
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import numpy as np
+from flask_cors import CORS
 
 
 class HeartInferer:
@@ -134,6 +135,7 @@ class StrokeInferer:
 
 
 app = Flask(__name__)
+CORS(app)
 
 heartInferer = HeartInferer()
 strokeInferer = StrokeInferer()

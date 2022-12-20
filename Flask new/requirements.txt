@@ -5,3 +5,4 @@ flask
 gunicorn
 numpy
 autopep8
+flask_cors

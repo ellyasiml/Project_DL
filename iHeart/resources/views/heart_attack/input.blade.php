@@ -34,7 +34,7 @@
             <div class="col-2"></div>
             <div class="col">
                 <div class="shadow p-3 m-5 bg-body rounded">
-                    <form id="heartForm" method="POST" onsubmit="onFormSubmit();">
+                    <form id="heartForm" >
                         <legend>Heart Patient Data</legend>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
@@ -113,10 +113,10 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="rest_ecg" class="form-label">Resting Electrocardiographic Results</label>
+                            <label for="restecg" class="form-label">Resting Electrocardiographic Results</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">monitor_heart</span></div>
-                                <select class="form-select" name="rest_ecg" id="rest_ecg">
+                                <select class="form-select" name="restecg" id="restecg">
                                     <option value="0">Normal</option>
                                     <option value="1">Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
                                     <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
@@ -124,23 +124,23 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="thalach" class="form-label">Maximum Heart Rate Achieved</label>
+                            <label for="thalachh" class="form-label">Maximum Heart Rate Achieved</label>
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">monitor_heart</span></div>
-                                <input type="number" class="form-control" name="thalach" id="thalach">
+                                <input type="number" class="form-control" name="thalachh" id="thalachh">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="exang" class="form-label">Exercise Induced Angina</label>
+                            <label for="exng" class="form-label">Exercise Induced Angina</label>
                             <div class="d-flex">
                                 <div class="form-check me-3">
-                                    <input class="form-check-input" type="radio" name="exang" id="no" value="0" checked>
+                                    <input class="form-check-input" type="radio" name="exng" id="no" value="0" checked>
                                     <label class="form-check-label" for="no">
                                         No
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exang" id="yes" value="1">
+                                    <input class="form-check-input" type="radio" name="exng" id="yes" value="1">
                                     <label class="form-check-label" for="yes">
                                         Yes
                                     </label>
@@ -177,19 +177,45 @@
                             <div class="input-group">
                                 <div class="input-group-text"><span class="material-symbols-outlined">bloodtype</span></div>
                                 <select class="form-select" name="thall" id="thall">
-                                    <option value="0">Unknown</option>
-                                    <option value="1">None</option>
+                                    <option value="0">None</option>
+                                    <option value="1">Fixed defect</option>
                                     <option value="2">Normal</option>
                                     <option value="3">Reversable Defect</option>
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#safeModal">Submit</button>
+                        <button type="submit" id="btn_submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#safeModal">Submit</button>
                     </form>
-                    <script>
-                        function onFormSubmit() {
-                        event.preventDefault();
-                    }
+                    
+    <script defer>
+        document.getElementById('btn_submit').onclick = async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(document.querySelector("#heartForm"))
+            const obj = Object.fromEntries(formData)
+            let adaKosong = false;
+            for (const key in obj) {
+                if (obj[key] === "") {
+                    adaKosong = true;
+                }
+            }
+            console.log(obj);
+
+            if (adaKosong) {
+                window.alert("Isi semua field")
+                return;
+            }
+
+            const res = await fetch("https://deep-learning-371908.et.r.appspot.com/heart", {
+                method: "POST",
+                body: formData
+            })
+            const json = await res.json();
+
+            document.getElementById('result_text').textContent = 
+            `${json.predicted == 1 ? "Kamu berpotensi tinggi " : "Kamu berpotensi rendah "} terkena serangan jantung dengan confidence ${json.confidence}`
+    }
+    </script>
                     </script>
                 </div>
             </div>
@@ -204,8 +230,8 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="{{asset('assets/image/safe.png')}}" width="130px">
-                <p><br>Less chance of heart attack or disease</p>
+                <img src="{{asset('assets/image/safe.png')}}" width="130px"><br>
+                <p id="result_text">Isi Semua Field</p>
             </div>
             <div class="modal-footer text-center">
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Understood</button>

@@ -11,5 +11,5 @@ Route::prefix('heart-attack')->group(function () {
 });
 Route::prefix('stroke')->group(function () {
     Route::get('/input', [StrokeController::class, 'input']);
-    Route::get('/result', [StrokeController::class, 'result']);
+    Route::post('/result', [StrokeController::class, 'result']);
 });
