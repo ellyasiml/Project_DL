@@ -192,6 +192,8 @@
             e.preventDefault();
             
             const formData = new FormData(document.querySelector("#heartForm"))
+            var image = document.getElementById("modal_image")
+
             const obj = Object.fromEntries(formData)
             let adaKosong = false;
             for (const key in obj) {
@@ -202,7 +204,8 @@
             console.log(obj);
 
             if (adaKosong) {
-                window.alert("Isi semua field")
+                document.getElementById('result_text').textContent = 
+                `Isi Semua Field`
                 return;
             }
 
@@ -212,11 +215,16 @@
             })
             const json = await res.json();
 
+            if (json.predicted == 0) {
+                image.src = "{{asset('assets/image/safe.png')}}"
+            };
             document.getElementById('result_text').textContent = 
-            `${json.predicted == 1 ? "Kamu berpotensi tinggi " : "Kamu berpotensi rendah "} terkena serangan jantung dengan confidence ${json.confidence}`
-    }
+            `${json.predicted == 1 ? "Pasien BERPOTENSI TINGGI " : "Pasien BERPOTENSI RENDAH "} terkena serangan jantung.`
+            document.getElementById('result_conf').textContent = 
+            `Confidence score: ${json.confidence}`
+        }
     </script>
-                    </script>
+
                 </div>
             </div>
             <div class="col-2"></div>
@@ -230,8 +238,9 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="{{asset('assets/image/safe.png')}}" width="130px"><br>
-                <p id="result_text">Isi Semua Field</p>
+                <img id="modal_image" src="{{asset('assets/image/danger.png')}}" width="130px"><br><br>
+                <p id="result_text"></p>
+                <p id="result_conf"></p>
             </div>
             <div class="modal-footer text-center">
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Understood</button>
