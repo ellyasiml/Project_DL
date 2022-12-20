@@ -17,11 +17,10 @@ class HeartInferer:
     df2 = pd.get_dummies(df, drop_first=True)
 
     sc = StandardScaler()
-    # This is bad btw, yg one-hot juga ter standard scaler
     sc.fit_transform(df2)
 
     def transform_row(self, age, trtbps, chol, thalachh, oldpeak, sex, cp, fbs, restecg, exng, slp, caa, thall):
-        # yg di onehot perlu lebih lanjut: cp, restecg, slp, caa, thall
+        # menyesuaikan value input dari form dengan bentuk input yang diterima oleh model
         # cp
         onehot_cp = [0, 0, 0]
         if cp == 3:
@@ -86,7 +85,7 @@ class HeartInferer:
 
 
 class StrokeInferer:
-    model_stroke = tf.keras.models.load_model('./models/stroke_model2.h5')
+    model_stroke = tf.keras.models.load_model('./models/stroke_model.h5')
     stroke_df = pd.read_csv("stroke.csv")
     stroke_cat_columns = ['gender', 'hypertension', 'heart_disease',
                           'ever_married', 'work_type', 'Residence_type', 'smoking_status', 'stroke']
