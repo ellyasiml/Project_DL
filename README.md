@@ -1,11 +1,11 @@
 # iHeart
 This project is made for 2022 Deep Learning class final project at Udayana University
 Team Member
-- I Gusti Ayu Mirah Agniati   (1905551009)
-- Lidya Yanti	                (1905551012)
-- Luckystia Mafasani Ulfa	    (1905551048)
-- Ellyas Immanuel Sinaga	    (1905551055)
-- Kevin Salim Yudistira	      (1905551057)
+- 1905551009 | I Gusti Ayu Mirah Agniati
+- 1905551012 | Lidya Yanti	     
+- 1905551048 | Luckystia Mafasani Ulfa	
+- 1905551055 | Ellyas Immanuel Sinaga	
+- 1905551057 | Kevin Salim Yudistira
 
 # DESKRIPSI WEBSITE
 iHeart adalah aplikasi web yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Selain itu aplikasi iHeart juga mempunyai fitur tambahan pendetaksi penyakit stroke. 
@@ -18,28 +18,42 @@ Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbed
 # Dataset Penyakit Jantung
 | No. | Nama Kolom | Keterangan |
 |-----| :--------: |------------|
-|  1. | `age`      | Usia pasien |
-|  2. | `sex`      | Jenis kelamin pasien |
-|  3. | `cp`       | Jenis nyeri dada (Angina)
-|     |            | - Value 1: typical angina |
-|     |            | - Value 2: atypical angina |
-|     |            | - Value 3: non-anginal pain |
-|     |            | - Value 4: asymptomatic |
-|  4. | `trtbps`   | Tekanan darah (mm Hg) |
-|  5. | `chol`     | Kolestrol (mg/dl) menggunakan sensor BMI |
+|  1. | `age`      | Usia pasien                  |
+|  2. | `sex`      | Jenis kelamin pasien         |
+|  3. | `cp`       | Jenis nyeri dada (Angina)    |
+|     |            | - Value 1: typical angina    |
+|     |            | - Value 2: atypical angina   |
+|     |            | - Value 3: non-anginal pain  |
+|     |            | - Value 4: asymptomatic      |
+|  4. | `trtbps`   | Tekanan darah (mm Hg)        |
+|  5. | `chol`     | Kolestrol (mg/dl) menggunakan sensor BMI    |
 |  6. | `fbs`      | fasting blood sugar (gula darah > 120 mg/dl)|
-|     |            | (1 = true; 0 = false|
-|  7. | `restecg`  | Hasil resting electrocardiographic|
-|  8. | `thalachh` | Detak jantung maksimum tercapai |
-|  9. | `exng`     | Nyeri (1 = yes; 0 = no) |
-| 10. | `oldpeak`  | Previous peak |
-| 11. | `slp`      | Slope of the Peak Exercise ST Segment |
-| 12. | `caa`      | Jumlah Major Vessels (0-3) |
-| 13. | `thall`    | Talasemia |
-
+|     |            | (1 = true; 0 = false)        |
+|  7. | `restecg`  | Hasil resting electrocardiographic          |
+|  8. | `thalachh` | Detak jantung maksimum tercapai             |
+|  9. | `exng`     | Nyeri (1 = yes; 0 = no)      |
+| 10. | `oldpeak`  | Previous peak                |
+| 11. | `slp`      | Slope of the Peak Exercise ST Segment       |
+| 12. | `caa`      | Jumlah Major Vessels (0-3)   |
+| 13. | `thall`    | Talasemia                    |
 
 
 # Dataset Stroke
+| No. | Nama Kolom | Keterangan |
+|-----| :--------: |------------|
+|  1. | `id`            | Unique identifier                       |
+|  2. | `gender`        | Jenis kelamin                           |
+|  3. | `age`           | Usia pasien                             |
+|  4. | `hypertension`  | Hipertensi (1 = yes; 0 = no)            |
+|  5. | `heart_disease` | Penyakit jantung (1 = yes; 0 = no)      |
+|  6. | `ever_married`  | Pernah menikah (yes or no)              |
+|  7. | `work_type`     | "children", "Govt_jov", "never_worked", |
+|     |                 | "private" or "self-employed"            |
+|  8. | `residence_type`|"rural" or "urban"                       |
+|  9. | `avg_glucose_level` | Kadar glukosa rata-rata dalam darah |
+|  10. | `bmi`          | Indeks Masa Tubuh                       |
+|  11. | `smoking_status` | "formerly smoked", "never smoked",    |
+|      |                |"smokes" or "Unknown"                    |
 
 # ALGORITMA
 Algoritma yang digunakan dalam Aplikasi iHeart yaitu Artificial Neural Network(ANN)
