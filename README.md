@@ -59,29 +59,153 @@ Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbed
 # ALGORITMA
 Algoritma yang digunakan dalam Aplikasi iHeart yaitu Artificial Neural Network(ANN)
 Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasan yang diilhami dari struktur otak manusia dan kemudian diimplementasikan menggunakan program komputer yang mampu menyelesaikan sejumlah proses perhitungan selama proses learning berlangsung. Artificial Neural Network cocok disambungan dengan dataset yang disiapkan, karna ANN ini memiliki kemampuan yang luar biasa untuk mendapatkan informasi dari data yang rumit atau tidak tepat sehingga permasalahan yang tidak terstruktur dan sulit didefinisikan dapat diatasi. Namun, Artificial Neural Network juga memiliki kelemahan dimana adanya ketergantungan terhadap hardware dan tidak efektif jika digunakan untuk melakukan operasi-operasi numerik dengan presisi tinggi dan membutuhkan pelatihan dalam waktu yang lama jika jumlah data yang diolah besar.
+
+
 # MODEL DEEP LEARNING
+1. MODEL HEART
 - MODEL 1
 
-# PROSES TREANING DAN TESTING
-Dataset yang diperoleh melalui tahap preprocessing, seperti one-hot encoding menggunakan get_dummies, dan juga feature scaling menggunakan StandardScaler. Khusus pada dataset Stroke, terjadi ketidak seimbangan pada label sehingga dilakukan oversampling pada train set. Pada dataset stroke juga terdapat sekitar 201 baris yang memiliki value null pada kolom BMI, maka baris-baris tersebut dibuang. Setelah melalui tahap preprocessing, maka dilakukan proses training. Proses training dimulai dengan memisahkan train set dengan test set. Train set 80% dan test set 20%.
+Model 1 terdiri dari total 4 lapisan.
+1.	Input layer dengan node 256
+2.	2 hidden layer dengan jumlah node berturut-turut 128 dan 64.
+3.	Output layer menggunakan aktivasi sigmoid.
 
-Pada model heart, training dilakukan dengan epoch 2000 dan validation split 0.1. Diterapkan pula EarlyStopping menggunakan parameter accuracy dengan patience 100.  Proses fitting terhenti pada Epoch ke-962 dengan accuracy tertinggi sekitar 0.96 dan val_accuracy tertinggi sekitar 0.88. Setelah melalui proses fitting, model diuji menggunakan test set yang telah disiapkan dan memperoleh akurasi sebesar 85% dengan recall label positif (1) sebesar 0.88.
+Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learning rate 0.0001. 
+Arsitektur lengkapnya dapat dilihat pada gambar dibawah.
 
-Pada model stroke, training dilakukan dengan epoch 5000 dan validation split 0.1. Diterapkan pula EarlyStopping menggunakan parameter accuracy dengan patience 50.  Proses fitting terhenti pada Epoch ke-1346 dengan accuracy tertinggi sekitar 0.84, dan val_accuracy tertinggi sekitar 0.97. Setelah melalui proses fitting, model diuji menggunakan test set yang telah disiapkan dan memperoleh akurasi sebesar 77% dengan recall label positif (1) sebesar 0.72.
+![image](https://user-images.githubusercontent.com/90238361/208729395-ebbdbbbd-0887-4c23-99ab-7d4e59dec1ac.png)
 
-# ANALISIS MODEL DAN HASIL EVALUASI
+Hasil training model 1 dapat dilihat pada gambar di bawah.
 
-# CARA MENJALANKAN APLIKASI
-1. Masuk ke halaman utama website iHeart 
-2. pilih akan melakukan analisa penyakit jantung ataupun stroke
-![image](https://user-images.githubusercontent.com/90238361/208703798-4c0a3fb4-6cec-4cd8-b11d-273e765a2b09.png)
-3. lakukan pengisian data pada form di halaman website iHeart
-![image](https://user-images.githubusercontent.com/90238361/208706274-3f521fdb-5fb4-463f-88c1-3304d525017a.png)
-![image](https://user-images.githubusercontent.com/90238361/208705016-3e7b0adf-53ec-4612-bc50-cf89de4ac47e.png)
-![image](https://user-images.githubusercontent.com/90238361/208705206-56b72dc2-5a2c-4548-9a74-59cd65af1904.png)
-4. setelah mengisi form data lalu klik submit
-![image](https://user-images.githubusercontent.com/90238361/208705463-1bedf317-f9a1-4f54-b7f6-fe0a1702104f.png)
-5. setelah melakukan submit, hasil output akan menunjukkan apakah pasien berpeluang memiliki penyakit jantung atau tidak sesuai dengan data yang telah di innputkan
-![image](https://user-images.githubusercontent.com/90238361/208706471-e20b8249-bc96-45ab-8882-b364805757e3.png)
+![image](https://user-images.githubusercontent.com/90238361/208729452-a1da90a5-bcdc-4215-809c-ef9082ee55d9.png)
 
+![image](https://user-images.githubusercontent.com/90238361/208729479-84a9fda8-84e1-49a2-9b0a-7483201b8183.png)
+
+Model mendapatkan accuracy tertinggi 0.82 dan loss 0.38 dengan val_accuracy 0.84 serta val_loss 0.32.
+
+Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
+![image](https://user-images.githubusercontent.com/90238361/208729594-8683c94a-3cc5-454a-8452-ac66d50a5642.png)
+
+Model 1 mendapat akurasi sebesar 87%, dan karena dataset yang digunakan merupakan dataset kesehatan maka recall label positif (1) mendapat prioritas tinggi dalam evaluasi model. Recall label 1 mendapat nilai 0.81.
+
+
+-	MODEL 2
+
+Model 2 terdiri dari total 4 lapisan.
+1.	Input layer dengan node 64
+2.	2 hidden layer dengan jumlah node berturut-turut 32 dan 32.
+3.	Output layer menggunakan aktivasi sigmoid.
+
+Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learning rate 0.0001. 
+Arsitektur lengkapnya dapat dilihat pada gambar dibawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208730209-769b67f4-bdc3-4306-9610-ab472de519b8.png)
+
+Hasil training model 2 dapat dilihat pada gambar di bawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208730300-9f22dfbd-8cfa-4f0d-aa25-9a7185e2fa43.png)
+
+![image](https://user-images.githubusercontent.com/90238361/208730321-31226f75-2111-401b-a617-d0e9ab57fcc7.png)
+
+Model 2 mendapatkan accuracy tertinggi 0.89 dan loss 0.26 dengan val_accuracy 0.88 serta val_loss 0.30.
+
+Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
+![image](https://user-images.githubusercontent.com/90238361/208730375-10c1a6ad-48b1-495a-8c71-62f6c634b677.png)
+
+Model 2 mendapat skor yang lebih baik dari model 1 dengan akurasi sebesar 87% dan recall label positif 0.84.
+
+
+- MODEL 3
+
+Model 3 terdiri dari total 5 lapisan
+
+1.	Input layer dengan node 128
+2.	3 hidden layer dengan jumlah node berturut-turut 64, 32 dan 32.
+3.	Output layer menggunakan aktivasi sigmoid.
+
+Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learning rate 0.00001. 
+Arsitektur lengkapnya dapat dilihat pada gambar dibawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208731548-d8e00143-8260-434f-9c02-4c16223c6001.png)
+
+Hasil training model 3 dapat dilihat pada gambar di bawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208731634-47c44ad1-3146-4436-a005-942aba77a7de.png)
+
+![image](https://user-images.githubusercontent.com/90238361/208731662-01b02dc0-02fe-489e-82a2-a81778f10862.png)
+
+Model 3 mendapatkan accuracy tertinggi 0.96 dan loss 0.08 dengan val_accuracy 0.88 serta val_loss akhir 0.46.
+
+Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208732069-441a5e13-c517-4b24-a97f-c13fb7ddf9f0.png)
+
+Model 3 mendapat akurasi yang lebih rendah dari model 2, yaitu 0.85. Namun mendapat recall label 1 yang lebih baik yaitu 0.88
+
+Hasil evaluasi: Dengan mempertimbangkan recall label positif sebagai prioritas utama dalam mengevaluasi model, diputuskan untuk menggunakan model 3.
+
+
+
+2. MODEL STROKE
+- MODEL 1
+
+Model 1 terdiri dari total 7 lapisan.
+
+1.	Input layer dengan node 128
+2.	5 hidden layer dengan jumlah node berturut-turut 64, 32, 16, 8, dan 8.
+3.	Output layer menggunakan aktivasi sigmoid.
+4.	
+Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learning rate 0.00005. 
+Arsitektur lengkapnya dapat dilihat pada gambar dibawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208732629-bc3227d5-f39e-4b17-9f53-2beb87ca039c.png)
+
+Hasil training model 1 dapat dilihat pada gambar di bawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208732697-979ddb6c-91b8-4fcb-b54e-512f970e5594.png)
+
+![image](https://user-images.githubusercontent.com/90238361/208732723-aed0bcc8-b984-4ba8-8fcb-966d042aec91.png)
+
+
+Model 1 mendapatkan accuracy tertinggi 0.84 dan loss 0.36 dengan val_accuracy 0.97 serta val_loss 0.29.
+
+Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208732810-163d856a-cd7b-4a77-8533-911df71c13e3.png)
+
+![image](https://user-images.githubusercontent.com/90238361/208732835-e9f2df0f-08be-47a0-b353-530b08f4064e.png)
+
+Model 1 mendapat akurasi sebesar 77%, dan karena dataset yang digunakan merupakan dataset kesehatan maka recall label positif (1) mendapat prioritas tinggi dalam evaluasi model. Recall label 1 mendapat nilai 0.72.
+
+- MODEL 2
+
+Model 2 terdiri dari total 8 lapisan.
+
+1.	Input layer dengan node 128
+2.	5 hidden layer dengan jumlah node berturut-turut 64, 32, 16, 8, 4, dan 4.
+3.	Output layer menggunakan aktivasi sigmoid.
+
+Model di-compile dengan loss binary_crossentropy dan optimizer adam dengan learning rate 0.00005. 
+Arsitektur lengkapnya dapat dilihat pada gambar dibawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208733666-48670458-998f-4208-93f5-f7b30314a154.png)
+
+Hasil training model 2 dapat dilihat pada gambar di bawah
+
+![image](https://user-images.githubusercontent.com/90238361/208733764-2fd77d92-6277-4ba9-8d4b-dc0155ca02f8.png)
+
+![image](https://user-images.githubusercontent.com/90238361/208733793-6f00a42a-5339-483c-b675-3f8a1f623a03.png)
+
+Model 2 mendapatkan accuracy tertinggi 0.69 dan loss 0.56 dengan val_accuracy 0.77 serta val_loss 0.58.
+
+Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya dapat dilihat pada gambar dibawah.
+
+![image](https://user-images.githubusercontent.com/90238361/208733868-c20bb96e-f6a3-4c45-960c-8673170de569.png)
+
+![image](https://user-images.githubusercontent.com/90238361/208733888-e9b42596-4ef8-40f1-a6f6-a2d519578f33.png)
+
+Model 2 mendapat akurasi sebesar 81% yang lebih baik daripada model 1, namun recall label positif (1) mendapat skor yang lebih rendah dari model 1 yaitu 0.68.
+
+
+Hasil evaluasi: Dengan mempertimbangkan recall label positif sebagai prioritas utama dalam mengevaluasi model, diputuskan untuk menggunakan model 1.
 
