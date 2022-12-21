@@ -12,6 +12,10 @@ iHeart adalah aplikasi yang berbasis website yang membantu staf medis untuk mene
 
 # ARSITEKTUR WEBSITE
 
+![Arsitektur](https://user-images.githubusercontent.com/90238361/208791263-92634ebc-eb5a-4539-8faa-d480003eddee.jpg)
+
+Gambar di atas merupakan arsitektur dari aplikasi berbasis website iHeart. 
+Model pada website iHeart dibuatkan Flask API dan di deploy pada Google app engine. Selanjutnya Website yang di buat menggunakan Laravel dibuatkan docker imagenya, kemudian dideploy menggunakan Google Cloud Run. Ketika tombol submit pada website diklik, website akan memanggil fungsi pada Google App Engine untuk melakukan prediksi dan hasilnya akan dikirim kembali ke website. Hasil prediksi yang dihasilkan yaitu memprediksi penyakit jantung ataupun penyakit stroke berdasarkan dataset yang digunakan.
 
 # DATASET
 Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbeda yang dimana menggunakan dataset penyakit jantung dan dataset penyakit stroke. masing-masaing data diambil melalui internet yang dimana Dataset penyakit jantung diambil dari Kaggle, berisi 13 atribut + 1 target label. *gender, sex, age, cholesterol, glucose, ECG result, BP, etc* dengan link  (https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv) dan dataset penyakit stroke diambil dari Kaggle, berisi11 atribut + 1 taeget label *gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke* dengan link (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
