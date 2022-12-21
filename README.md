@@ -10,6 +10,19 @@ Team Member
 # DESKRIPSI WEBSITE
 iHeart adalah aplikasi yang berbasis website yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Selain itu aplikasi iHeart juga mempunyai fitur tambahan pendetaksi penyakit stroke. 
 
+# CARA MENJALANKAN APLIKASI
+1.	Masuk ke halaman utama aplikasi iHeart
+2.	Pilih akan melakukan prediksi penyakit jantung ataupun penyakit stroke
+![image](https://user-images.githubusercontent.com/90238361/208801128-63239a2f-a199-4389-ac3f-e7d579210c30.png)
+
+3.	Selanjutnya, isi semua data pada form di halaman aplikasi
+4.	Setelah selesai mengisi data klik tombol submit untuk mendapatkan hasil prediksi
+![image](https://user-images.githubusercontent.com/90238361/208801326-03a6bff9-a0c4-442d-940a-d2dd7ee528c0.png)
+
+5.	Hasil output prediksi berupa diagnosa apakah pasien memilki kemungkinan penyakit jantung atau tidak.
+![image](https://user-images.githubusercontent.com/90238361/208801392-2b4bcb1a-709b-4f55-bebe-fba7cb85deb4.png)
+
+
 # ARSITEKTUR WEBSITE
 
 ![Arsitektur](https://user-images.githubusercontent.com/90238361/208791263-92634ebc-eb5a-4539-8faa-d480003eddee.jpg)
@@ -18,7 +31,13 @@ Gambar di atas merupakan arsitektur dari aplikasi berbasis website iHeart.
 Model pada website iHeart dibuatkan Flask API dan di deploy pada Google app engine. Selanjutnya Website yang di buat menggunakan Laravel dibuatkan docker imagenya, kemudian dideploy menggunakan Google Cloud Run. Ketika tombol submit pada website diklik, website akan memanggil fungsi pada Google App Engine untuk melakukan prediksi dan hasilnya akan dikirim kembali ke website. Hasil prediksi yang dihasilkan yaitu memprediksi penyakit jantung ataupun penyakit stroke berdasarkan dataset yang digunakan.
 
 # DATASET
-Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbeda yang dimana menggunakan dataset penyakit jantung dan dataset penyakit stroke. masing-masaing data diambil melalui internet yang dimana Dataset penyakit jantung diambil dari Kaggle, berisi 13 atribut + 1 target label. *gender, sex, age, cholesterol, glucose, ECG result, BP, etc* dengan link  (https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv) dan dataset penyakit stroke diambil dari Kaggle, berisi11 atribut + 1 taeget label *gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke* dengan link (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbeda yang dimana menggunakan dataset penyakit jantung dan dataset penyakit stroke. masing-masaing data diambil me1.	Masuk ke halaman utama aplikasi iHeart
+2.	Pilih akan melakukan prediksi penyakit jantung ataupun penyakit stroke
+![Uploading image.png…]()
+
+
+3.	Selanjutnya, isi semua data pada form di halaman aplikasi
+lalui internet yang dimana Dataset penyakit jantung diambil dari Kaggle, berisi 13 atribut + 1 target label. *gender, sex, age, cholesterol, glucose, ECG result, BP, etc* dengan link  (https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv) dan dataset penyakit stroke diambil dari Kaggle, berisi11 atribut + 1 taeget label *gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke* dengan link (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
 
 ## Dataset Penyakit Jantung
 | No. | Nama Kolom | Keterangan |
