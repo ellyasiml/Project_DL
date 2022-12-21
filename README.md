@@ -73,8 +73,8 @@ Pada model stroke, training dilakukan dengan epoch 5000 dan validation split 0.1
 
 
 # MODEL DEEP LEARNING
-1. MODEL HEART
-- MODEL 1
+# 1. Model Heart
+# - Model 1
 
 Model 1 terdiri dari total 4 lapisan.
 1.	Input layer dengan node 256
@@ -100,7 +100,7 @@ Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya da
 Model 1 mendapat akurasi sebesar 87%, dan karena dataset yang digunakan merupakan dataset kesehatan maka recall label positif (1) mendapat prioritas tinggi dalam evaluasi model. Recall label 1 mendapat nilai 0.81.
 
 
--	MODEL 2
+# -	MODEL 2
 
 Model 2 terdiri dari total 4 lapisan.
 1.	Input layer dengan node 64
@@ -126,7 +126,7 @@ Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya da
 Model 2 mendapat skor yang lebih baik dari model 1 dengan akurasi sebesar 87% dan recall label positif 0.84.
 
 
-- MODEL 3
+# - MODEL 3
 
 Model 3 terdiri dari total 5 lapisan
 
@@ -157,8 +157,8 @@ Hasil evaluasi: Dengan mempertimbangkan recall label positif sebagai prioritas u
 
 
 
-2. MODEL STROKE
-- MODEL 1
+# 2. MODEL STROKE
+# - MODEL 1
 
 Model 1 terdiri dari total 7 lapisan.
 
@@ -188,7 +188,7 @@ Evaluasi dilakukan dengan menggunakan test set yang sudah disiapkan. Hasilnya da
 
 Model 1 mendapat akurasi sebesar 77%, dan karena dataset yang digunakan merupakan dataset kesehatan maka recall label positif (1) mendapat prioritas tinggi dalam evaluasi model. Recall label 1 mendapat nilai 0.72.
 
-- MODEL 2
+# - MODEL 2
 
 Model 2 terdiri dari total 8 lapisan.
 
