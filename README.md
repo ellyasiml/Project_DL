@@ -7,14 +7,7 @@ Team Member
 - 1905551055 | Ellyas Immanuel Sinaga	
 - 1905551057 | Kevin Salim Yudistira
 
-
-## Table of Contents
-1. [Deskripsi Website](#deskripsiwebsite)
-2. [Cara Menjalankan Aplikasi](#cara)
-3. [Arsitektur Website](#arsitektur)
-4. [Dataset](#dataset)
-   *[Dataset Penyakit Jantung](#dtjt)
-   *[Dataset Stroke](#dtstrk)
+**********
 
 # DESKRIPSI WEBSITE <div id='deskripsiwebsite'/> 
 iHeart adalah aplikasi yang berbasis website yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Selain itu aplikasi iHeart juga mempunyai fitur tambahan pendetaksi penyakit stroke. 
