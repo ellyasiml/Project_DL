@@ -24,7 +24,7 @@ iHeart adalah aplikasi yang berbasis website yang membantu staf medis untuk mene
 2.	Pilih akan melakukan prediksi penyakit jantung ataupun penyakit stroke
 ![image](https://user-images.githubusercontent.com/90238361/208801128-63239a2f-a199-4389-ac3f-e7d579210c30.png)
 
-3.	Selanjutnya, isi semua data pada form di halaman aplikasi
+3.	Selanjutnya, isi semua data pada form di halaman website
 4.	Setelah selesai mengisi data klik tombol submit untuk mendapatkan hasil prediksi
 ![image](https://user-images.githubusercontent.com/90238361/208801326-03a6bff9-a0c4-442d-940a-d2dd7ee528c0.png)
 
@@ -40,7 +40,7 @@ Gambar di atas merupakan arsitektur dari aplikasi berbasis website iHeart.
 Model pada website iHeart dibuatkan Flask API dan di deploy pada Google app engine. Selanjutnya Website yang di buat menggunakan Laravel dibuatkan docker imagenya, kemudian dideploy menggunakan Google Cloud Run. Ketika tombol submit pada website diklik, website akan memanggil fungsi pada Google App Engine untuk melakukan prediksi dan hasilnya akan dikirim kembali ke website. Hasil prediksi yang dihasilkan yaitu memprediksi penyakit jantung ataupun penyakit stroke berdasarkan dataset yang digunakan.
 
 # DATASET
-Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbeda yang dimana menggunakan dataset penyakit jantung dan dataset penyakit stroke. masing-masaing data diambil melalui internet yang dimana Dataset penyakit jantung diambil dari Kaggle, berisi 13 atribut + 1 target label. *gender, sex, age, cholesterol, glucose, ECG result, BP, etc* dengan link  (https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv) dan dataset penyakit stroke diambil dari Kaggle, berisi11 atribut + 1 taeget label *gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke* dengan link (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbeda yang dimana menggunakan dataset penyakit jantung dan dataset penyakit stroke. masing-masaing data diambil melalui internet yang dimana Dataset penyakit jantung diambil dari Kaggle, berisi 13 atribut dan  menggunak 1 target label. *gender, sex, age, cholesterol, glucose, ECG result, BP, etc* dengan link  (https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv) dan dataset penyakit stroke diambil dari Kaggle, berisi11 atribut dan menggunakan 1 taeget label *gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status, stroke* dengan link (https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
 
 ## Dataset Penyakit Jantung
 | No. | Nama Kolom | Keterangan |
@@ -83,8 +83,8 @@ Dataset yang di buat dalam tugas Deep Learning ini mengambil dua data yag berbed
 |      |                |"smokes" or "Unknown"                    |
 
 # ALGORITMA
-Algoritma yang digunakan dalam Aplikasi iHeart yaitu Artificial Neural Network(ANN)
-Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasan yang diilhami dari struktur otak manusia dan kemudian diimplementasikan menggunakan program komputer yang mampu menyelesaikan sejumlah proses perhitungan selama proses learning berlangsung. Artificial Neural Network cocok disambungan dengan dataset yang disiapkan, karna ANN ini memiliki kemampuan yang luar biasa untuk mendapatkan informasi dari data yang rumit atau tidak tepat sehingga permasalahan yang tidak terstruktur dan sulit didefinisikan dapat diatasi. Namun, Artificial Neural Network juga memiliki kelemahan dimana adanya ketergantungan terhadap hardware dan tidak efektif jika digunakan untuk melakukan operasi-operasi numerik dengan presisi tinggi dan membutuhkan pelatihan dalam waktu yang lama jika jumlah data yang diolah besar.
+Algoritma yang digunakan dalam Website iHeart yaitu Artificial Neural Network(ANN)
+Metode Artificial Neural Network(ANN) merupakan suatu pendekatan model kecerdasan yang diilhami dari struktur otak manusia dan kemudian diimplementasikan menggunakan program komputer yang mampu menyelesaikan sejumlah proses perhitungan selama proses learning berlangsung. Artificial Neural Network cocok disambungan dengan dataset yang disiapkan, karna Artificial Neural Network(ANN) ini memiliki kemampuan yang luar biasa untuk mendapatkan informasi dari data yang rumit atau tidak tepat sehingga permasalahan yang tidak terstruktur dan sulit didefinisikan dapat diatasi. Namun, Artificial Neural Network(ANN) juga memiliki kelemahan dimana adanya ketergantungan terhadap hardware dan tidak efektif jika digunakan untuk melakukan operasi-operasi numerik dengan presisi tinggi dan membutuhkan pelatihan dalam waktu yang lama jika jumlah data yang diolah besar.
 
 # PROSES TRAINING DAN TESTING
 Dataset yang diperoleh melalui tahap preprocessing, seperti one-hot encoding menggunakan get_dummies, dan juga feature scaling menggunakan StandardScaler. Khusus pada dataset Stroke, terjadi ketidak seimbangan pada label sehingga dilakukan oversampling pada train set. Pada dataset stroke juga terdapat sekitar 201 baris yang memiliki value null pada kolom BMI, maka baris-baris tersebut dibuang. Setelah melalui tahap preprocessing, maka dilakukan proses training. Proses training dimulai dengan memisahkan train set dengan test set. Train set 80% dan test set 20%.
