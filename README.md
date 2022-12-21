@@ -12,7 +12,7 @@ Team Member
 # DESKRIPSI WEBSITE <div id='deskripsiwebsite'/> 
 iHeart adalah aplikasi yang berbasis website yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Selain itu aplikasi iHeart juga mempunyai fitur tambahan pendetaksi penyakit stroke. 
 
-# CARA MENJALANKAN APLIKASI <div id='cara'/> 
+# CARA MENJALANKAN WEBSITE <div id='cara'/> 
 1.	Masuk ke halaman utama aplikasi iHeart
 2.	Pilih akan melakukan prediksi penyakit jantung ataupun penyakit stroke
 ![image](https://user-images.githubusercontent.com/90238361/208801128-63239a2f-a199-4389-ac3f-e7d579210c30.png)
@@ -233,7 +233,3 @@ Pada model stroke, training dilakukan dengan epoch 5000 dan validation split 0.1
 >>
 >>
 >>Hasil evaluasi: Dengan mempertimbangkan recall label positif sebagai prioritas utama dalam mengevaluasi model, diputuskan untuk menggunakan model 1.
-
-
-
-
