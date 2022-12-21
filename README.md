@@ -9,11 +9,17 @@ Team Member
 
 
 ## Table of Contents
+1. [Deskripsi Website](#deskripsiwebsite)
+2. [Cara Menjalankan Aplikasi](#cara)
+3. [Arsitektur Website](#arsitektur)
+4. [Dataset](#dataset)
+   *[Dataset Penyakit Jantung](#dtjt)
+   *[Dataset Stroke](#dtstrk)
 
 # DESKRIPSI WEBSITE <div id='deskripsiwebsite'/> 
 iHeart adalah aplikasi yang berbasis website yang membantu staf medis untuk menentukan apakah pasien memiliki peluang tinggi terkena serangan jantung atau penyakit jantung. Selain itu aplikasi iHeart juga mempunyai fitur tambahan pendetaksi penyakit stroke. 
 
-# CARA MENJALANKAN APLIKASI
+# CARA MENJALANKAN APLIKASI <div id='cara'/> 
 1.	Masuk ke halaman utama aplikasi iHeart
 2.	Pilih akan melakukan prediksi penyakit jantung ataupun penyakit stroke
 ![image](https://user-images.githubusercontent.com/90238361/208801128-63239a2f-a199-4389-ac3f-e7d579210c30.png)
@@ -26,7 +32,7 @@ iHeart adalah aplikasi yang berbasis website yang membantu staf medis untuk mene
 ![image](https://user-images.githubusercontent.com/90238361/208801392-2b4bcb1a-709b-4f55-bebe-fba7cb85deb4.png)
 
 
-# ARSITEKTUR WEBSITE
+# ARSITEKTUR WEBSITE <div id='arsitektur'/> 
 
 ![Arsitektur](https://user-images.githubusercontent.com/90238361/208791263-92634ebc-eb5a-4539-8faa-d480003eddee.jpg)
 
